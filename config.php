@@ -3,7 +3,7 @@
 $host =$_env('host');        // Dirección del servidor de base de datos
 $username =$_env('username');    // Usuario de la base de datos
 $password =$_env('password');// Contraseña de la base de datos
-$dbname =$_env('Dbname');      // Nombre de la base de datos
+$dbname =$_env('dbname');      // Nombre de la base de datos
 $port =$_env('port');        // Puerto de la base de datos
 
 // Crear la conexión
