@@ -1,10 +1,10 @@
 <?php
 // Obtén las credenciales de la base de datos desde variables de entorno
-$host = getenv('DB_HOST');        // Dirección del servidor de base de datos
-$username = getenv('DB_USER');    // Usuario de la base de datos
-$password = getenv('DB_PASSWORD');// Contraseña de la base de datos
-$dbname = getenv('DB_NAME');      // Nombre de la base de datos
-$port = getenv('DB_PORT');        // Puerto de la base de datos
+$host = getenv('host');        // Dirección del servidor de base de datos
+$username = getenv('username');    // Usuario de la base de datos
+$password = getenv('password');// Contraseña de la base de datos
+$dbname = getenv('Dbname');      // Nombre de la base de datos
+$port = getenv('port');        // Puerto de la base de datos
 
 // Crear la conexión
 $conn = new mysqli($host, $username, $password, $dbname, $port);
