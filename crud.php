@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "usuarios");
+include 'config.php'
 
 // Función para obtener todos los productos
 function obtenerProductos() {
