@@ -15,7 +15,7 @@ if (!$DB_HOST || !$DB_USER || !$DB_PASSWORD || !$DB_NAME || !$DB_PORT) {
 $DB_PORT = (int)$DB_PORT;
 
 // Crear la conexión
-$conn = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $DB_PORT);
+$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
 
 // Verificar la conexión
 if ($conn->connect_error) {
