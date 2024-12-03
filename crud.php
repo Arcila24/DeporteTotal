@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-include 'config.php'
+include 'config.php';
 
 // Función para obtener todos los productos
 function obtenerProductos() {
