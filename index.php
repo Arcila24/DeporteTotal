@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <?php include 'config.php'; ?> <!-- Conexión a la base de datos -->
+    <?php include '/app/config.php'; ?> <!-- Conexión a la base de datos -->
 
     <header id="header" class="header">
         <div class="container">
@@ -36,7 +36,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php include 'mostrar_carrito.php'; ?> <!-- Carga el carrito dinámicamente -->
+                                            <?php include '/app/mostrar_carrito.php'; ?> <!-- Carga el carrito dinámicamente -->
                                         </tbody>
                                     </table>
                                     <p id="total">Total: $0.00</p>
@@ -68,7 +68,7 @@
     <div id="lista-cursos" class="container">
         <h1 id="encabezado" class="encabezado">Descuentos y Promociones</h1>
         <div class="row">
-            <?php include 'promociones.php'; ?> <!-- Carga los productos dinámicamente -->
+            <?php include '/app/promociones.php'; ?> <!-- Carga los productos dinámicamente -->
         </div>
     </div>
 
