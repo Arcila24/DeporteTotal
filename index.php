@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="./index/icono.jpg" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carrito</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
     <?php include '/app/config.php'; ?> <!-- Conexión a la base de datos -->
@@ -43,7 +43,7 @@
                                     <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
                                     <div id="datos-comprador">
     <h2>Detalles del Comprador</h2>
-    <form action="guardar_comprador.php" method="post">
+    <form action="/guardar_comprador.php" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" required>
         
