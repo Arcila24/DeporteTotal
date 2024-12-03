@@ -1,7 +1,17 @@
 <?php
+// Obtener las credenciales desde las variables de entorno de Railway
+$DB_HOST = getenv('DB_HOST');        // Dirección del servidor de base de datos
+$DB_USER = getenv('DB_USER');    // Usuario de la base de datos
+$DB_PASSWORD = getenv('DB_PASSWORD');// Contraseña de la base de datos
+$DB_NAME = getenv('DB_NAME');      // Nombre de la base de datos
+$DB_PORT = getenv('DB_PORT');        // Puerto de la base de datos
 // Conexión a la base de datos
-$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
+$conexion = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME, $DB_PORT);
 
+// Verificar conexión
+if (!$conexion) {
+    die("Error de conexión a la base de datos: " . mysqli_connect_error());
+}
 // Función para obtener todos los productos
 function obtenerProductos() {
     global $conexion;
