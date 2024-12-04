@@ -1,49 +1,35 @@
 name: ProyectoActions
-
 on: 
   push:
     branches:
       - '*' # Observa cambios en cualquier rama
   pull_request:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
-    - name: Print a message
-      run: echo "Funciona Actions en cualquier rama"
-
+    
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
-
-    - name: Install Node.js (for Railway CLI)
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
+    
     - name: Install dependencies
-      run:
-        npm install
+      run: npm install
         
     - name: Run Stylelint
-      run:
-        npx stylelint "**/*.css" || true
+      run: npx stylelint "**/*.css" || true
         
     - name: Run JavaScript linter
-      run:
-        npm run lint:js
-
+      run: npm run lint:js
+    
     - name: Install Railway CLI
       run: npm install -g @railway/cli
-
+    
     - name: Authenticate with Railway
-      run: railway login --key ${{ secrets.RAILWAY_TOKEN }}
-
+      run: railway login -t ${{ secrets.RAILWAY_TOKEN }}
+    
     - name: Deploy to Railway
-      run: railway up --ci
+      run: railway up
