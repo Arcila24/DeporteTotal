@@ -66,7 +66,7 @@
     </header>
 
     <div id="lista-cursos" class="container">
-        <h1 id="encabezado" class="encabezado">Descuentos y Promociones</h1>
+        <h1 id="encabezado" class="encabezado">Gran Promocion</h1>
         <div class="row">
             <?php include '/app/promociones.php'; ?> <!-- Carga los productos dinámicamente -->
         </div>
