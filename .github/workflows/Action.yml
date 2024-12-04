@@ -2,7 +2,7 @@ name: ProyectoActions
 on: 
   push:
     branches:
-      - '*' # Observa cambios en cualquier rama
+      - '*'
   pull_request:
 jobs:
   build:
@@ -28,8 +28,7 @@ jobs:
     - name: Install Railway CLI
       run: npm install -g @railway/cli
     
-    - name: Authenticate with Railway
-      run: railway login -t ${{ secrets.RAILWAY_TOKEN }}
-    
     - name: Deploy to Railway
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       run: railway up
